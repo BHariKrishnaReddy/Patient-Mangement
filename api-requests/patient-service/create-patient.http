@@ -1,0 +1,24 @@
+### add patients
+POST http://lb-8000120a.elb.localhost.localstack.cloud:4003/api/patients
+Content-Type: application/json
+
+{
+  "name": "HariKrishna1",
+  "email": "trusttheprocess1@gmail.com",
+  "address": "jkkj lksa",
+  "dateOfBirth": "2000-11-23",
+  "registeredDate": "2025-11-12"
+}
+
+###
+POST http://localhost:4000/patients
+Content-Type: application/json
+
+{
+"name": "HKR",
+"email": "jkjkj@gmail.com",
+"address": "jkkj lksa",
+"dateOfBirth": "2021-11-23",
+"registeredDate": "2025-11-12"
+}
+###

@@ -1,0 +1,51 @@
+server:
+  port: 4004 # Gateway listens on port 4004
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service-route
+          uri: http://auth-service:4005
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+        # Route for /api/patients/** to patient-service
+        - id: patient-service-route
+          uri: http://patient-service:4000
+          predicates:
+            - Path=/api/patients/**
+          filters:
+            - StripPrefix=1
+            - JwtValidation
+
+        # Route for /api/docs/patients to patient-service /v3/api-docs
+        - id: api-docs-patient-route
+          uri: http://patient-service:4000
+          predicates:
+            - Path=/api-docs/patients
+          filters:
+            - RewritePath=/api-docs/patients,/v3/api-docs
+
+        - id: api-docs-auth-route
+          uri: http://auth-service:4005
+          predicates:
+            - Path=/api-docs/auth
+          filters:
+            - RewritePath=/api-docs/auth,/v3/api-docs
+
+#              what is going on here ?
+#              FRONTEND CLIENT (REST CLIENT) -> http://localhost:4004/api/patients
+# this request is going to land in our API GATEWAY, then it uses the rules to determine what to do with request.
+# API_G rewrite the request such a way that patient service micr_serv expects
+
+#              API GATEWAY -> http://patient-service:4000/patients
+#
+#              PATIENT SERVICE (SPRING BOOT APP) -> /patients -> returns patients array
+
+
+
+              # REST http://localhost:4004/api-docs/patients
+              # API http://patient-service:4000/v3/api-docs
