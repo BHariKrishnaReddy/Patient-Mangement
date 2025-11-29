@@ -1,5 +1,7 @@
 # Patient Management – Microservices Project
 
+This is a place where I implement stuff now and then to catch up with things ...
+
 This repository contains a **Patient Management System** built using **Java Spring Boot microservices**, with support for **Authentication, Billing, Analytics, and API Gateway routing**. It is designed as a learning/demo project for building production-ready healthcare microservices.
 
 ---
