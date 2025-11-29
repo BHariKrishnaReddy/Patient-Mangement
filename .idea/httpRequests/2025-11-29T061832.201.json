@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "patientId": 2,
+  "amount": 25.75,
+  "diagnosisCode": "A1234",
+  "status": "CREATED",
+  "createdAt": "2025-11-29T11:18:32.931096Z"
+}

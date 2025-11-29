@@ -1,0 +1,23 @@
+server:
+  port: 4001
+
+spring:
+  application:
+    name: claim-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/claimsdb
+    username: claim_user
+    password: claim_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "patientId": 1,
+    "amount": 250.75,
+    "diagnosisCode": "A123",
+    "status": "CREATED",
+    "createdAt": "2025-11-29T11:17:42.693193Z"
+  },
+  {
+    "id": 2,
+    "patientId": 2,
+    "amount": 25.75,
+    "diagnosisCode": "A1234",
+    "status": "CREATED",
+    "createdAt": "2025-11-29T11:18:32.931096Z"
+  },
+  {
+    "id": 3,
+    "patientId": 3,
+    "amount": 20.75,
+    "diagnosisCode": "A1235",
+    "status": "CREATED",
+    "createdAt": "2025-11-29T11:18:34.871663Z"
+  }
+]
