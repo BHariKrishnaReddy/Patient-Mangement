@@ -1,3 +1,93 @@
+DELETE http://localhost:4001/api/claims/3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=99C7693C2D5F542ABC87B462AEAAABB8
+content-length: 0
+
+###
+
+PUT http://localhost:4001/api/claims/1
+Content-Type: application/json
+Content-Length: 53
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=99C7693C2D5F542ABC87B462AEAAABB8
+
+{
+  "diagnosisCode": "B456",
+  "status": "APPROVED"
+}
+
+<> 2025-11-29T061946.200.json
+
+###
+
+GET http://localhost:4001/api/claims
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=99C7693C2D5F542ABC87B462AEAAABB8
+
+<> 2025-11-29T061901.200.json
+
+###
+
+POST http://localhost:4001/api/claims
+Content-Type: application/json
+Content-Length: 67
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=99C7693C2D5F542ABC87B462AEAAABB8
+
+{
+  "patientId": 3,
+  "amount": 20.75,
+  "diagnosisCode": "A1235"
+}
+
+<> 2025-11-29T061834.201.json
+
+###
+
+POST http://localhost:4001/api/claims
+Content-Type: application/json
+Content-Length: 61
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=99C7693C2D5F542ABC87B462AEAAABB8
+
+{
+"patientId": 2,
+"amount": 25.75,
+"diagnosisCode": "A1234"
+}
+
+<> 2025-11-29T061832.201.json
+
+###
+
+POST http://localhost:4001/api/claims
+Content-Type: application/json
+Content-Length: 67
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=99C7693C2D5F542ABC87B462AEAAABB8
+
+{
+  "patientId": 1,
+  "amount": 250.75,
+  "diagnosisCode": "A123"
+}
+
+<> 2025-11-29T061742.201.json
+
+###
+
 GET http://lb-8000120a.elb.localhost.localstack.cloud:4004/api/patients
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NDMyODEyMCwiZXhwIjoxNzY0MzY0MTIwfQ.-exVq4nfvak6wzC0XDRkT5L2MZNOYBPV64sfgLoZDX8
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.4

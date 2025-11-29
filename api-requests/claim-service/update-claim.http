@@ -1,0 +1,7 @@
+PUT http://localhost:4001/api/claims/1
+Content-Type: application/json
+
+{
+  "diagnosisCode": "B456",
+  "status": "APPROVED"
+}

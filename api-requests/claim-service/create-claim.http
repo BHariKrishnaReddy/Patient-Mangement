@@ -1,0 +1,27 @@
+POST http://localhost:4001/api/claims
+Content-Type: application/json
+
+{
+  "patientId": 1,
+  "amount": 250.75,
+  "diagnosisCode": "A123"
+}
+
+###
+POST http://localhost:4001/api/claims
+Content-Type: application/json
+
+{
+"patientId": 2,
+"amount": 25.75,
+"diagnosisCode": "A1234"
+}
+###
+POST http://localhost:4001/api/claims
+Content-Type: application/json
+
+{
+  "patientId": 3,
+  "amount": 20.75,
+  "diagnosisCode": "A1235"
+}

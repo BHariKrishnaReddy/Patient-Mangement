@@ -7,13 +7,11 @@ import com.pm.patient_service.repository.PatientRepository;
 import com.pm.patient_service.service.PatientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
 import jakarta.validation.groups.Default;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -52,7 +50,7 @@ public class PatientController {
     }
 
     @DeleteMapping("/{id}")
-    @Operation(summary = "Delte Patient by Id")
+    @Operation(summary = "Delete Patient by Id")
     public ResponseEntity<Void> deletePatient(@PathVariable UUID id) {
         patientRepository.deleteById(id);
         return ResponseEntity.noContent().build();
